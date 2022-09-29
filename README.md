@@ -2,8 +2,11 @@
 <div align="center">
   <a href="https://github.com/Karthi-Villain/Py_SQL_Manager">
     <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/6/62/MySQL.svg/langfr-800px-MySQL.svg.png" alt="Logo" width="200" height="80">
+  </a>
+  <a href="https://github.com/Karthi-Villain/Py_SQL_Manager">
     <img src="https://www.python.org/static/img/python-logo.png" alt="Logo" width="290" height="82">
   </a>
+
 
   <h3 align="center">Welcome</h3>
 
