@@ -40,7 +40,7 @@ I Just made This Project to know how much i have Knowledge about Python Programm
   ```
 * Clone the repo
    ```sh
-   git clone https://github.com/Karthi-Villain/Py_SQL_Manager
+   git clone https://github.com/Karthi-Villain/Py_SQL_Manager && cd Py_SQL_Manager
    ```
 * Run Program
    ```sh
