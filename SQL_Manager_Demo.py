@@ -165,16 +165,16 @@ def Menu(db_name=''):
     cmd = "INSERT INTO  (Name,RollNo,Address) VALUES (%s,%s,%s)"
     print(cmd)
     Op=int(input("""\n
-        ######################################################################
-        #               Reply An Operation To Be Performed:                  #
-        #********************************************************************#
-        # 1. Create DataBase                 2. Show Available DataBase      #
-        # 3. Create a Table                  4. Show Available Tables        #
-        # 5. Insert Records in Table         6. Display All Records in Table #
-        # 7. Delete a Record                 8. Delete a Table               #
-        # 9. Delete The Complete DataBase   10. Exit                         #
-        ######################################################################
-                                 Enter an Option: """))
+###############################[ Menu ]###############################
+#                Reply An Operation To Be Performed:                 #
+#********************************************************************#
+# 1. Create DataBase                 2. Show Available DataBase      #
+# 3. Create a Table                  4. Show Available Tables        #
+# 5. Insert Records in Table         6. Display All Records in Table #
+# 7. Delete a Record                 8. Delete a Table               #
+# 9. Delete The Complete DataBase    10. Exit                        #
+######################################################################
+                         Enter an Option: """))
     if(Op==1):
         Create_db(db_name)
     elif (Op==2):
