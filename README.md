@@ -37,7 +37,7 @@ I Just made This Project to know how much i have Knowledge about Python Programm
   ```
 * Clone the repo
    ```sh
-   git clone https://github.com/Karthi-Villain/Py_SQL_Manager.git
+   git clone https://github.com/Karthi-Villain/Py_SQL_Manager
    ```
 * Run Program
    ```sh
