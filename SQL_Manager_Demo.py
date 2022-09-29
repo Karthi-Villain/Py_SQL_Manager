@@ -162,8 +162,6 @@ def Delete_db(db_name):
 
 #10 A Menu To Make This Program Effective
 def Menu(db_name=''):
-    cmd = "INSERT INTO  (Name,RollNo,Address) VALUES (%s,%s,%s)"
-    print(cmd)
     Op=int(input("""\n
 ###############################[ Menu ]###############################
 #                Reply An Operation To Be Performed:                 #
