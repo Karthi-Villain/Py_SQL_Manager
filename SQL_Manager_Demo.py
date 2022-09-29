@@ -174,7 +174,7 @@ def Menu(db_name=''):
 # 7. Delete a Record                 8. Delete a Table               #
 # 9. Delete The Complete DataBase    10. Exit                        #
 ######################################################################
-                         Enter an Option: \n"""))
+                         Enter an Option: """))
     if(Op==1):
         Create_db(db_name)
     elif (Op==2):
@@ -194,7 +194,6 @@ def Menu(db_name=''):
     elif (Op==9):
         Delete_db(db_name)
     elif (Op==10):
-        cursor.close()
         print("\nProgram Finished")
         return
     else:
