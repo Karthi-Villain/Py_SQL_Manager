@@ -19,7 +19,7 @@ def Create_db(db_name):
     db = mysql.connector.connect(host=host,user=us_name,passwd=passwd)
     cursor = db.cursor()
     cursor.execute("CREATE DATABASE IF NOT EXISTS "+db_name)
-    print("DataBase "+db_name+" Created Successfully!")
+    print("DataBase '"+db_name+"' Created Successfully!")
     Menu(db_name)
 
 #2 Checking If Data Base Is Created Or Not
@@ -88,6 +88,7 @@ def Insert_Rec_db(db_name):
             val=(S_name,S_roll,S_address)
             cursor.execute(cmd,val)
             db.commit()
+        print("Records Added into "+db_table+" Successfully!")
     else:
         print("Enter The Details:")
         S_name=input("Enter the Name Of the Student: ")
@@ -97,7 +98,7 @@ def Insert_Rec_db(db_name):
         val=(S_name,S_roll,S_address)
         cursor.execute(cmd,val)
         db.commit()
-    print("Records Added Successfully!")
+        print("Record Added into "+db_table+" Successfully!")
     Menu(db_name)
 
 #6 Display All the Data From Database
@@ -116,7 +117,7 @@ def Display_Rec(db_name):
         print(x)
         i+=1
     if(i>0):
-        print(i," Records Displayed Successfully!") 
+        print(i," Records of '"+tb_table+"' Displayed Successfully!") 
     else:
         print("No Records - Empty Table")
     Menu(db_name)
@@ -134,7 +135,7 @@ def Delete_Rec(db_name):
     print("Record Deleted Successfully!")
     Menu(db_name)
 
-#8 Deleat Table
+#8 Delete Table from Detabase
 def Delete_Tab(db_name):
     db_name=input("Enter a DataBase Name: ")
     db = mysql.connector.connect(host=host,user=us_name,passwd=passwd,database=db_name)
@@ -144,7 +145,8 @@ def Delete_Tab(db_name):
     if(x=='y' or x=='Y'):
         cmd="DROP TABLE "+db_table
         cursor.execute(cmd)
-        print("Table "+db_table+" Deleted Successfully!")
+        db.commit()
+        print("Table '"+db_table+"' Deleted Successfully!")
     Menu(db_name)
 
 #9 Deleting The Complete DataBase 🥲
@@ -157,7 +159,7 @@ def Delete_db(db_name):
         cmd="DROP DATABASE "+db_name
         cursor.execute(cmd)
         db.commit()
-        print("DataBase "+db_name+" Deleted Successfully!")
+        print("DataBase '"+db_name+"' Deleted Successfully!")
     Menu(db_name)
 
 #10 A Menu To Make This Program Effective
@@ -172,7 +174,7 @@ def Menu(db_name=''):
 # 7. Delete a Record                 8. Delete a Table               #
 # 9. Delete The Complete DataBase    10. Exit                        #
 ######################################################################
-                         Enter an Option: """))
+                         Enter an Option: """\n))
     if(Op==1):
         Create_db(db_name)
     elif (Op==2):
@@ -192,6 +194,7 @@ def Menu(db_name=''):
     elif (Op==9):
         Delete_db(db_name)
     elif (Op==10):
+        cursor.close()
         print("\nProgram Finished")
         return
     else:
